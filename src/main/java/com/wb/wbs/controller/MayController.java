@@ -192,10 +192,9 @@ public class MayController extends BaseController {
         return  responseUtils.success(wlName);
     }
 
+
     /**
-     * 参数 imei lat lng
-     * 状态 status 根据status判断状态
-     * 如果为新数据则将返回一个code 设置成3 返回前端数据
+     * 接受经纬度信息返回
      * @param imei macNum
      * @param lat  纬度
      * @param lng 经度
@@ -238,27 +237,6 @@ public class MayController extends BaseController {
             return responseUtils.success(upt);
         }
         return responseUtils.error("该人员不存在,请联系管理员添加18858948293");
-    }
-
-
-    @PostMapping("/update/locations")
-    @LimitRequest(count = 10)
-    public BaseResponse mjUpdate(String imei,Double lng,Double lat)
-    {
-        //根据imei获得维保人员信息
-        WbManDan wbMan = wbManService.findByMacNum(imei);
-
-        if(wbMan != null)
-        {
-            //存储位置信息
-        }
-        return responseUtils.success();
-    }
-
-
-
-    public static void main(String[] args) {
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a").format(new Date()));
     }
 
 }
