@@ -1,6 +1,8 @@
 package com.wb.wbs.controller;
 
 
+import com.wb.wbs.dao.WbManDistanceRepository;
+import com.wb.wbs.dao.WbManLocationRepository;
 import com.wb.wbs.entity.WbDan;
 import com.wb.wbs.service.*;
 import com.wb.wbs.utils.ResponseUtils;
@@ -35,4 +37,9 @@ public class BaseController {
     WbManService wbManService;
     @Autowired
     public WbService wbService;
+    @Autowired
+    public WbManLocationRepository wbManLocationRepository;
+
+    @Autowired
+    public WbManDistanceRepository wbManDistanceRepository;
 }
