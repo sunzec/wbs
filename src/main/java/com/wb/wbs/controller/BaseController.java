@@ -39,7 +39,6 @@ public class BaseController {
     public WbService wbService;
     @Autowired
     public WbManLocationRepository wbManLocationRepository;
-
     @Autowired
     public WbManDistanceRepository wbManDistanceRepository;
 }

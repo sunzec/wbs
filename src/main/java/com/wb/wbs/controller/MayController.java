@@ -8,6 +8,10 @@ import com.wb.wbs.inter.LimitRequest;
 import com.wb.wbs.test.ShiroFl;
 import com.wb.wbs.utils.BaseResponse;
 import com.wb.wbs.utils.Locationutils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +47,12 @@ public class MayController extends BaseController {
      * @param lng 经度
      * @return
      */
+    @ApiOperation(value = "存储定位信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "imei", value = "手机唯一标识", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "lat", value = "纬度", required = true, dataType = "Double"),
+            @ApiImplicitParam(name = "lng", value = "经度", required = true, dataType = "Double")
+    })
     @PostMapping("/updates/location")
     @LimitRequest(count = 5)
     public BaseResponse mjGet(String imei,Double lat,Double lng) {
