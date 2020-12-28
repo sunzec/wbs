@@ -2,18 +2,18 @@
 spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#    username: sa
-#    password: 385878
-#    url: jdbc:sqlserver://192.168.1.233:1433;DatabaseName=shiroTest
+    #    username: sa
+    #    password: 385878
+    #    url: jdbc:sqlserver://192.168.1.233:1433;DatabaseName=shiroTest
     username: sa
     password: mhsoft@888
+#    url: jdbc:sqlserver://192.168.1.220:1433;DatabaseName=2018兰溪神箭
     url: jdbc:sqlserver://192.168.1.220:1433;DatabaseName=LXSJERP
-#    type: com.alibaba.druid.pool.DruidDataSource
   jpa:
     show-sql: false
     hibernate:
       naming:
-#        取消小写命名
+        #取消小写命名
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update

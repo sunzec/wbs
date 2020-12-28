@@ -10,7 +10,7 @@ import java.util.Date;
  * 维保人员位置信息表
  */
 @Entity
-@Table(name=  "wb_man_location")
+@Table(name=  "WbMan_Location")
 @Data
 public class WbManLocation {
 
